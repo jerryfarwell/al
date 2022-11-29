@@ -1,0 +1,17 @@
+
+<br>
+<div class="av">
+  <% @event.each do |event| %><br><br>
+  <div class="flex-container">
+<div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+  <div class="card-header">titre: <%= event.title %><br></div>
+  <div class="card-body">
+    <h5 class="card-title">auteur: <%= event.author %><br></h5>
+    <h5 class="card-title">date: <%= event.start_date %><br></h5>
+    <p class="card-text"><%= link_to "voir l’event", event %></p>
+  </div>
+</div>
+
+    </div>
+<% end %>
+</div>

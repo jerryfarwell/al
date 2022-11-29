@@ -1,0 +1,55 @@
+<nav class="navbar navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="<%= events_path %>"><img src="https://cdn.dribbble.com/users/1368492/screenshots/6991943/brbl_4x.jpg" width="155" height="60"></img></a>
+    
+     <a class="navbar-brand" href="<%= new_event_path %>">créer un évènement</a>
+     <a class="navbar-brand" href="#"></a>
+    <a class="navbar-brand" href="#">se connecter</a>
+    <a class="navbar-brand" href="#">nous rejoindre</a>
+    
+    <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Profil
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <% if user_signed_in? %>
+    <a class="dropdown-item" href="<%= user_path(current_user.id) %>">Voir</a>
+    <% end %>
+    <% if user_signed_in? %>
+    <a class="dropdown-item" href="<%= edit_user_registration_path target = "_blank" %>">modifier votre profil</a>
+     <% end %>
+      <% if user_signed_in? %>
+    <div class = "logoutbtn"><%= button_to "deconnexion", destroy_user_session_path, method: :delete %></div>
+    <% end %>
+  </div>
+  </div>
+  <a class="navbar-brand" href="#"></a>
+   
+   <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form> 
+<a class="navbar-brand" href="#"></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="#">Hidden brand</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</nav>
+<h5 class="alert"><%= alert %></h5>
+<p class="notice"><%= notice %></p>
+<a href="https://www.instagram.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" width="50"></img></a>  <a href="https://www.facebook.com/beyonce"><img src="https://www.yourtes-de-barousse.com/wp-content/uploads/2016/03/facebook-icon-basic-round-social-iconset-s-icons-7.png" width="50"></img></a>  <a href="https://twitter.com/"><img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" width="50"></img></a>  <a href="https://github.com/jerryfarwell"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="50"></img></a>

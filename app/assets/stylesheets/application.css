@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+body {
+    background: linear-gradient(#ffffff, #d391e5);
+}
+
+.flex-container {
+    text-align: center;
+    margin: 3%;
+    padding: 5%;
+    
+    
+ }
+
+ .av {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+ }

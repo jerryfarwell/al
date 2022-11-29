@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  start_date: 2022-11-29 00:04:49
+  author: MyString
+  duration: 1
+  description: MyText
+  location: 1
+
+two:
+  title: MyString
+  start_date: 2022-11-29 00:04:49
+  author: MyString
+  duration: 1
+  description: MyText
+  location: 1

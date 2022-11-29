@@ -1,0 +1,21 @@
+	
+    <div class="form" style="text-align: center">
+	      <%= form_tag(events_path, method: :post, class: "form") do %>
+	        <label for="title">Title :<br>
+	        <%= text_field_tag  :title %><br><br>
+
+	        <label for="author">author :<br>
+	        <%= text_field_tag  :author %><br><br>
+	
+	        <label for="author">content : <br>
+	        <%= text_area_tag  :content %><br><br>
+	
+	       <label for="author">start_date :<br>
+	        <%= date_field_tag  :start_date %><br><br>
+	
+	         <label for="author">price :<br>
+	        <%= number_field_tag  :price %><br><br>
+	
+	        <%= submit_tag 'create', :name => 'commit'%>
+	      <% end %>
+	</div>
