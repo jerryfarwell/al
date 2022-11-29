@@ -1,0 +1,36 @@
+<br><br>
+<h2>Votre Profil</h2><br>
+
+
+<div class = "profil">
+
+<div class="card mb-3">
+  <div class="card-body">
+    <%if @user.avatar.attached?%>
+    <%= image_tag @user.avatar, alt: 'avatar' %>
+    <%else%>
+      <p>=== Il n'y a pas de photo sur votre profil ===</p>
+      <p>=== ajour votre photo ici 👇🏽 ===</p>
+    <%end%>
+
+     <br><br>
+     <p>=== modifier votre photo ici ===</p>
+      <p>=== choisir puis ajouter 👇🏽 ===</p>
+    <%= form_tag user_avatars_path(@user), multipart: true do %>
+      <%= file_field_tag :avatar %>
+      <%= submit_tag "Ajouter" %>
+    <% end %><br><br>
+
+    <h4 class="card-title"><%= current_user.first_name %></h4>
+    <h4><%= current_user.last_name %></h4>
+    <h5>Date de naissance : <%= current_user.birthdate %></h5>
+    <h5>email : <%= current_user.email %></h5>
+    
+
+    <p class="card-text"> Bio : <%= current_user.about %></p><br><br><br>
+    <p class="card-text"><small class="text-muted">Last updated <%= current_user.updated_at %> </small></p>
+    <a href = "<%= edit_user_registration_path %>"><button type="button" class="btn btn-outline-secondary">modifier</button></a>
+  </div>
+</div>
+
+</div><br><br>

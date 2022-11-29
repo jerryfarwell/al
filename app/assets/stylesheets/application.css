@@ -30,3 +30,27 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
  }
+
+ .slide  {
+
+  
+    width: 80%;
+    height: auto;
+    float: right;
+    
+ }
+
+ .mainsentences {
+
+    text-align: right;
+ }
+
+ .choise {
+
+    float: right;
+ }
+
+ .footer {
+
+    background-color: rgb(102, 96, 96);
+ }
