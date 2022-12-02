@@ -7,7 +7,7 @@
 <div class="card mb-3">
   <div class="card-body">
     <%if @user.avatar.attached?%>
-    <%= image_tag @user.avatar, alt: 'avatar' %>
+    <%= image_tag @user.avatar, alt: 'avatar', class:'img-fluid rounded-pill', style:'height:20rem ; width:20rem'%>
     <%else%>
       <p>=== Il n'y a pas de photo sur votre profil ===</p>
       <p>=== ajour votre photo ici 👇🏽 ===</p>
@@ -33,4 +33,6 @@
   </div>
 </div>
 
-</div><br><br>
+</div><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
